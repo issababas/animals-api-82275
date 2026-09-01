@@ -1,0 +1,26 @@
+info:
+  name: Crear Animal
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3000/animals
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Rocky",
+        "especie": "Canis lupus",
+        "raza": "Golden Retriever",
+        "edad": 4,
+        "peso": 28.7
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

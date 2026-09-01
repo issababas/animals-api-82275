@@ -1,0 +1,22 @@
+info:
+  name: Actualizar Animal
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: http://localhost:3000/animals/2
+  body:
+    type: json
+    data: |-
+      {
+        "peso": 27.1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

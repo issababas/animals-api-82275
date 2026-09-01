@@ -1,0 +1,26 @@
+info:
+  name: Probar Validación
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://localhost:3000/animals
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Firulais",
+        "especie": "Canis lupus",
+        "raza": "Mestizo",
+        "edad": -5,
+        "peso": -10
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
